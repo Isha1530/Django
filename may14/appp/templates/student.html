@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student data</title>
+</head>
+<body>
+    <form action="", method="post" enctype = "multipart/form-data">
+        {% csrf_token %}
+        {% comment %} Name:
+        <input type="text" id="name" name="name"><br><br>
+        Age:
+        <input type="number" id="age" name="age"><br><br>
+        Email:
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit"> {% endcomment %}
+
+        {% comment %} <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="image">image:</label><br>
+        <input type="file" id="image" name="image" ><br><br>
+        <input type="submit" value="Submit"> {% endcomment %}
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="description">description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+        <label for="price">price:</label><br>
+        <input type="number" id="price" name="price" required><br><br>
+        <label for="image">image:</label><br>
+        <input type="file" id="image" name="image" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
