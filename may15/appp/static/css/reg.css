@@ -1,0 +1,128 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    min-height: 100vh;
+    padding-top: 60px; /* push form downward a bit */
+}
+
+/* Center horizontally only */
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Registration Card */
+form {
+    background-color: #ffffff;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    animation: slideFadeIn 0.6s ease-in-out;
+    margin: 0 auto; /* Center the form */
+    position: relative; /* For absolute positioning of the background */
+    overflow: hidden; /* To contain the pseudo-element */
+
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    background-color: 135deg, #74ebd5, #acb6e5;
+    padding: 10px 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+
+    
+
+}
+
+/* Input groups */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 22px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #74ebd5;
+    box-shadow: 0 0 6px rgba(116, 235, 213, 0.6);
+}
+
+/* Button style */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #5a67d8, #6b46c1);
+    box-shadow: 0 0 6px rgba(90, 103, 216, 0.6);
+    margin:50px ;
+}
+
+/* Animation */
+@keyframes slideFadeIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+    form {
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button[type="submit"] {
+        font-size: 15px;
+    }
+}

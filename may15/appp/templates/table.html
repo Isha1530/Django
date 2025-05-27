@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 2px solid #333;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        img {
+            max-width: 100%;
+        }
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- {{categories}}
+    {% for i in  categories%}
+    {{i.id}}
+    {{i.name}}
+    {{i.image}}
+    {% endfor %}
+
+    <table>
+        <caption>Categories</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td><img src="{{ category.image.url }}" alt="{{ category.name }}" width="100"></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {{products}}
+    {% for i in  products%}
+    {{i.id}}
+    {{i.name}}
+    {{i.description}}
+    {{i.price}}
+    {{i.image}}
+    {% endfor %}
+
+    <table>
+        <caption>Categories</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>description</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in products %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.description }}</td>
+                <td>{{ category.price }}</td>
+                <td><img src="{{ category.image.url }}" alt="{{ category.name }}" width="100"></td>
+            </tr>
+            {% endfor %}
+        </tbody> 
+
+        
+    </table>-->
+
+    {{student}}
+    {% for i in student %}
+    {{i.id}}
+    {{i.name}}
+    {{i.age}}
+    {{i.email}}
+    {% endfor %}
+
+    <table>
+        <caption>Students</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in student %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.age }}</td>
+                <td>{{ student.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

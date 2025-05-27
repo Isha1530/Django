@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reg.css' %}">
+    {% if message %}
+        <script>
+            alert("{{ message }}");
+        </script>
+    {% endif %}
+
+    {% if error %}
+        <script>
+            alert("{{ error }}");
+        </script>
+    {% endif %}
+
+    {% if notsame %}
+        <script>
+            alert("{{ notsame }}");
+        </script>
+    {% endif %}
+</head>
+<body>
+    <h1>Registration Page</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone_no">Phone No:</label>
+        <input type="tel" id="phone_no" name="phone_no" required maxlength="10" minlength="10"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required><br>
+        <a href="{% url 'login' %}">Already have an account?</a>
+        <br>
+        <button type="submit">Register</button>
+        
+    </form>
+</body>
+
+</html>
