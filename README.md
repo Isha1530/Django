@@ -11,3 +11,4 @@ task1 : static table showing in site
 <br>
 task2 : make mode name register and it's fields
 <br>
+may15 : regstration and login page
